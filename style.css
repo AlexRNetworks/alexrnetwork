@@ -1,4 +1,4 @@
-/* Your Original CSS Starts Here - Exactly as you provided */
+/* Your Original CSS (with 'main' adjusted) Starts Here */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -197,7 +197,7 @@ body {
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 100%; }
 }
-.theme-arcade body { /* This was .theme-arcade body, which is less specific. Applied to .theme-arcade directly for text-shadow */
+.theme-arcade body {
     text-shadow: 1px 1px 0 #000;
 }
 .theme-arcade header, .theme-arcade footer {
@@ -206,7 +206,6 @@ body {
 }
 .theme-arcade nav ul li a {
     color: #fce803; /* Bright yellow */
-    /* font-family: 'Press Start 2P', cursive; */ /* Example retro font - you'd need to import this */
     text-shadow: 2px 2px #ff00ff;
 }
 .theme-arcade nav ul li a:hover,
@@ -262,393 +261,9 @@ body {
     background-color: #fce803;
 }
 
-/* --- End Theme Specific Styles (Original) --- */
+/* --- End Original Theme Specific Styles --- */
 
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth header transitions */
-}
-
-.header-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.header-logo {
-    height: 40px;
-    width: auto;
-    margin-right: 15px;
-    vertical-align: middle;
-}
-
-.site-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #eee;
-    text-shadow: 1px 1px 3px #000;
-    margin: 0;
-    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth title transitions */
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-    padding: 5px 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #bbb;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #eee;
-}
-
-main {
-    padding: 80px 20px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    padding-top: 250px;
-}
-
-.content-section {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-    width: 90%;
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */
-}
-
-.content-section.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.content-section h1,
-.content-section h2 {
-    color: #eee;
-    margin-bottom: 20px;
-    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth text transitions */
-}
-
-.content-section p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-    transition: color 0.5s ease; /* Smooth text transitions */
-}
-
-.content-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.content-section ul li {
-    margin-bottom: 10px;
-    color: #ccc;
-    transition: color 0.5s ease; /* Smooth text transitions */
-}
-
-.call-to-action .button {
-    display: inline-block;
-    background-color: #5865F2;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.5s ease; /* Added theme transitions */
-}
-
-.call-to-action .button:hover {
-    background-color: #434dab;
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #777;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
-    backdrop-filter: blur(10px);
-    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease; /* Smooth footer transitions */
-}
-
-/* iframe specific styling */
-.iframe-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    padding-bottom: 75%;
-    height: 0;
-    overflow: hidden;
-    background-color: #000;
-    border-radius: 8px;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Adjustments for the content-section specifically for games */
-#games {
-    max-width: 95%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px 20px;
-    max-height: calc(100vh - 250px);
-    overflow-y: auto;
-    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */
-}
-
-#games h2 {
-    margin-bottom: 15px;
-}
-
-#games p {
-    margin-bottom: 20px;
-}
-
-/* Custom Scrollbar Styling for Games Section and Proxy List */
-#games::-webkit-scrollbar,
-.proxy-list-container::-webkit-scrollbar {
-    width: 12px;
-}
-
-#games::-webkit-scrollbar-track,
-.proxy-list-container::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-#games::-webkit-scrollbar-thumb,
-.proxy-list-container::-webkit-scrollbar-thumb {
-    background-color: #5865F2; /* Default blue for scrollbar thumb */
-    border-radius: 10px;
-    border: 3px solid rgba(0, 0, 0, 0.5);
-    transition: background-color 0.5s ease; /* Smooth transition for scrollbar theme changes */
-}
-
-#games::-webkit-scrollbar-thumb:hover,
-.proxy-list-container::-webkit-scrollbar-thumb:hover {
-    background-color: #7289DA;
-}
-
-
-/* PROXY LIST CONTAINER STYLING */
-#proxies h3 {
-    color: #eee;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    border-bottom: 2px solid #5865F2;
-    padding-bottom: 5px;
-    display: inline-block;
-    transition: color 0.5s ease, border-color 0.5s ease, text-shadow 0.5s ease; /* Smooth theme transitions */
-}
-
-.proxy-list-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 2px solid #5865F2;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 600px;
-    margin: 30px auto;
-    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
-
-    max-height: 400px;
-    overflow-y: auto;
-    text-align: left;
-    padding-right: 30px;
-    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Smooth theme transitions */
-}
-
-.proxy-group {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.proxy-group li {
-    margin-bottom: 8px;
-}
-
-.proxy-group li a {
-    text-decoration: none;
-    color: #ccc;
-    font-weight: normal;
-    display: block;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-size: 200% auto;
-    background-position: 0% 0%;
-    position: relative;
-}
-
-.proxy-group li a:hover {
-    background-image: linear-gradient(90deg, #4158D0, #C850C0, #FFCC70);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: translateX(10px) scale(1.02);
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-    color: initial;
-}
-
-/* --- Theme Switcher Section Styles --- */
-/* Ensure theme-switcher is centered within its content-section */
-#themes .theme-switcher { /* Target the specific theme-switcher within the themes section */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically if container has defined height */
-    margin-top: 30px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    /* No need for specific max-width here, content-section already limits it */
-}
-
-.theme-button {
-    background-color: #5865F2; /* Default button color */
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-.theme-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-.theme-button:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    main {
-        padding-top: 250px;
-    }
-    .content-section {
-        padding: 20px;
-    }
-    .iframe-container {
-        padding-bottom: 75%;
-    }
-    header {
-        padding: 10px;
-    }
-    .header-top {
-        flex-direction: column;
-        margin-bottom: 5px;
-    }
-    .header-logo {
-        margin-right: 0;
-        margin-bottom: 5px;
-        height: 30px;
-    }
-    .site-title {
-        font-size: 24px;
-    }
-    nav ul li {
-        margin: 0 8px;
-    }
-
-    /* Proxy List Responsive Adjustments */
-    .proxy-list-container {
-        max-width: 95%;
-        max-height: 350px;
-        padding-right: 20px;
-    }
-    #proxies h3 {
-        font-size: 1.5em;
-    }
-    .proxy-group li a {
-        padding: 6px 10px;
-    }
-
-    /* Games section responsive adjustment */
-    #games {
-        max-height: calc(100vh - 180px);
-    }
-    /* Theme switcher responsive */
-    #themes .theme-switcher { /* Specific targeting for themes section */
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-    .theme-button {
-        width: 100%;
-    }
-}
-/* Your Original CSS Ends Here */
-
-/* --- New Themes - Appended Below --- */
+/* --- New Themes - Added/Updated Below --- */
 
 /* --- Minecraft Theme --- */
 .theme-minecraft .animated-background {
@@ -749,94 +364,105 @@ footer {
     background-color: #8A705A;
 }
 
-/* --- Black Ops 2 Theme --- */
+/* --- Black Ops 2 Theme (White, Black, Orange) --- */
 .theme-blackops2 .animated-background {
-    background: linear-gradient(145deg, #0A1218, #1A2833 60%, #2C3F50);
-    animation: bo2GradientAnimation 20s infinite alternate;
+    background: linear-gradient(145deg, #000000, #1a1a1a 60%, #2d2d2d); /* Black/Dark Gray Gradient */
+    animation: bo2GradientAnimation 20s infinite alternate; /* Re-use existing keyframes if suitable or make new ones */
 }
-@keyframes bo2GradientAnimation {
+/* Keyframes for BO2 background (can be kept if the motion is desired, or set to none) */
+@keyframes bo2GradientAnimation { 
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 100%; }
 }
+
 .theme-blackops2 {
-    color: #D5D5D5; 
+    color: #FFFFFF; /* Default text to white */
 }
 .theme-blackops2 header, .theme-blackops2 footer {
-    background-color: rgba(10, 18, 24, 0.85); 
-    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.3); 
-    border-bottom: 1px solid rgba(255, 107, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.9); /* Near black, very opaque */
+    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.6); /* Orange glow, slightly stronger */
+    border-bottom: 1px solid rgba(255, 107, 0, 0.4); /* Orange border */
 }
 .theme-blackops2 .site-title {
-    color: #FF6B00; 
-    text-shadow: 0 0 5px rgba(255, 107, 0, 0.7), 1px 1px 2px #000;
+    color: #FF6B00; /* Orange */
+    text-shadow: 0 0 6px rgba(255, 107, 0, 0.8), 0 0 2px #000000; /* Orange glow, black depth */
 }
 .theme-blackops2 nav ul li a {
-    color: #00BFFF; 
-    font-weight: 600; 
+    color: #FFFFFF; /* White */
+    font-weight: 600;
     text-shadow: none; 
 }
 .theme-blackops2 nav ul li a:hover,
 .theme-blackops2 nav ul li a.active {
-    color: #FF6B00; 
-    text-shadow: 0 0 3px rgba(255, 107, 0, 0.5);
+    color: #FF6B00; /* Orange */
+    text-shadow: 0 0 4px rgba(255, 107, 0, 0.6);
     background-color: transparent; 
 }
 .theme-blackops2 .content-section {
-    background-color: rgba(20, 30, 42, 0.8); 
-    border: 1px solid rgba(0, 191, 255, 0.3); 
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.4), 0 0 10px rgba(0, 191, 255, 0.1);
-    border-radius: 4px; 
+    background-color: rgba(15, 15, 15, 0.9); /* Very dark gray, almost black */
+    border: 1px solid rgba(255, 107, 0, 0.5); /* Orange border */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.7), 0 0 12px rgba(255, 107, 0, 0.2);
+    border-radius: 2px; /* Sharp edges */
 }
 .theme-blackops2 .content-section h1,
 .theme-blackops2 .content-section h2 {
-    color: #FF6B00; 
-    text-shadow: 0 0 4px rgba(255, 107, 0, 0.5);
+    color: #FF6B00; /* Orange */
+    text-shadow: 0 0 5px rgba(255, 107, 0, 0.6);
+}
+.theme-blackops2 .content-section p {
+    color: #FFFFFF; /* Ensure paragraph text is white */
 }
 .theme-blackops2 .call-to-action .button {
-    background-color: #FF6B00;
-    color: #fff;
-    text-shadow: 1px 1px #000;
-    border: 1px solid #CC5600;
-    border-radius: 3px;
-    box-shadow: none; 
+    background-color: #FF6B00; /* Orange background */
+    color: #000000; /* Black text */
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.15); /* Subtle light shadow for depth on button text */
+    border: 1px solid #B34A00; /* Darker orange border */
+    border-radius: 2px; /* Sharp */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 .theme-blackops2 .call-to-action .button:hover {
-    background-color: #E65A00;
-    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+    background-color: #E65A00; /* Slightly darker orange */
+    color: #000000;
+    box-shadow: 0 0 12px rgba(255, 107, 0, 0.7), 0 2px 5px rgba(0,0,0,0.6);
     transform: scale(1.05); 
 }
 .theme-blackops2 .proxy-list-container {
-    background-color: rgba(15, 22, 30, 0.9);
-    border-color: rgba(0, 191, 255, 0.4);
-    box-shadow: 0 0 8px rgba(0, 191, 255, 0.3);
+    background-color: rgba(10, 10, 10, 0.95); /* Very very dark */
+    border-color: rgba(255, 107, 0, 0.6); /* Orange border */
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.4);
 }
 .theme-blackops2 #proxies h3 {
-    border-color: #FF6B00;
-    color: #00BFFF;
-    text-shadow: 0 0 3px rgba(0, 191, 255, 0.4);
+    border-color: #FF6B00; /* Orange bottom border */
+    color: #FFFFFF; /* White */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 .theme-blackops2 .proxy-group li a {
-    color: #A0DFFF; 
+    color: #CCCCCC; /* Light gray for links */
     background-image: none; 
     text-shadow: none;
     -webkit-background-clip: initial;
     background-clip: initial;
     -webkit-text-fill-color: initial;
+    padding: 6px 12px;
+    border: 1px solid rgba(255,107,0,0.2);
+    background-color: rgba(30,30,30,0.5);
+    border-radius: 2px;
 }
 .theme-blackops2 .proxy-group li a:hover {
-    background-image: linear-gradient(to right, rgba(255,107,0,0.2), rgba(0,191,255,0.2));
-    color: #FFF;
-    text-shadow: 0 0 5px #FFF;
+    background-color: rgba(255, 107, 0, 0.2); 
+    color: #FF8C00; /* Brighter orange for hover text */
+    text-shadow: 0 0 3px #FF8C00;
+    border-color: rgba(255,107,0,0.5);
     transform: translateX(10px) scale(1.02); 
     -webkit-background-clip: initial; 
     background-clip: initial;
     -webkit-text-fill-color: initial;
 }
 .theme-blackops2 ::-webkit-scrollbar-thumb {
-    background-color: #FF6B00;
+    background-color: #FF6B00; /* Orange */
 }
 .theme-blackops2 ::-webkit-scrollbar-thumb:hover {
-    background-color: #00BFFF;
+    background-color: #FFFFFF; /* White */
 }
 
 /* --- Neo Tokyo Theme --- */
@@ -952,3 +578,390 @@ footer {
 }
 
 /* --- End of Appended New Themes --- */
+
+/* --- General Styles (Original) --- */
+/* (The following is the rest of your original CSS from the prompt) */
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth header transitions */
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.site-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #eee;
+    text-shadow: 1px 1px 3px #000;
+    margin: 0;
+    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth title transitions */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    padding: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #eee;
+}
+
+main {
+    padding: 80px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* MODIFIED: Changed justify-content to flex-start */
+    justify-content: flex-start; 
+    /* MODIFIED: Reduced padding-top. Adjust this value as needed based on your actual header height. */
+    padding-top: 180px; /* Original was 250px */
+    min-height: 100vh;
+    text-align: center;
+}
+
+.content-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 90%;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */
+}
+
+.content-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section h1,
+.content-section h2 {
+    color: #eee;
+    margin-bottom: 20px;
+    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth text transitions */
+}
+
+.content-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: color 0.5s ease; /* Smooth text transitions */
+}
+
+.content-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+    color: #ccc;
+    transition: color 0.5s ease; /* Smooth text transitions */
+}
+
+.call-to-action .button {
+    display: inline-block;
+    background-color: #5865F2;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.5s ease; /* Added theme transitions */
+}
+
+.call-to-action .button:hover {
+    background-color: #434dab;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #777;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease; /* Smooth footer transitions */
+}
+
+/* iframe specific styling */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Adjustments for the content-section specifically for games */
+#games {
+    max-width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+    max-height: calc(100vh - 250px); /* You might want to adjust this if main padding-top changes significantly */
+    overflow-y: auto;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */
+}
+
+#games h2 {
+    margin-bottom: 15px;
+}
+
+#games p {
+    margin-bottom: 20px;
+}
+
+/* Custom Scrollbar Styling for Games Section and Proxy List */
+#games::-webkit-scrollbar,
+.proxy-list-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+#games::-webkit-scrollbar-track,
+.proxy-list-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#games::-webkit-scrollbar-thumb,
+.proxy-list-container::-webkit-scrollbar-thumb {
+    background-color: #5865F2; /* Default blue for scrollbar thumb */
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease; /* Smooth transition for scrollbar theme changes */
+}
+
+#games::-webkit-scrollbar-thumb:hover,
+.proxy-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: #7289DA;
+}
+
+
+/* PROXY LIST CONTAINER STYLING */
+#proxies h3 {
+    color: #eee;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #5865F2;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.5s ease, border-color 0.5s ease, text-shadow 0.5s ease; /* Smooth theme transitions */
+}
+
+.proxy-list-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #5865F2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
+
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right: 30px;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Smooth theme transitions */
+}
+
+.proxy-group {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.proxy-group li {
+    margin-bottom: 8px;
+}
+
+.proxy-group li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: normal;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-size: 200% auto;
+    background-position: 0% 0%;
+    position: relative;
+}
+
+.proxy-group li a:hover {
+    background-image: linear-gradient(90deg, #4158D0, #C850C0, #FFCC70);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(10px) scale(1.02);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    color: initial;
+}
+
+/* --- Theme Switcher Section Styles --- */
+/* Ensure theme-switcher is centered within its content-section */
+#themes .theme-switcher { /* Target the specific theme-switcher within the themes section */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if container has defined height */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.theme-button {
+    background-color: #5865F2; /* Default button color */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.theme-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.theme-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding-top: 150px; /* Adjusted for smaller screens, if header is shorter too */
+    }
+    .content-section {
+        padding: 20px;
+    }
+    .iframe-container {
+        padding-bottom: 75%;
+    }
+    header {
+        padding: 10px;
+    }
+    .header-top {
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    .header-logo {
+        margin-right: 0;
+        margin-bottom: 5px;
+        height: 30px;
+    }
+    .site-title {
+        font-size: 24px;
+    }
+    nav ul li {
+        margin: 0 8px;
+    }
+
+    /* Proxy List Responsive Adjustments */
+    .proxy-list-container {
+        max-width: 95%;
+        max-height: 350px;
+        padding-right: 20px;
+    }
+    #proxies h3 {
+        font-size: 1.5em;
+    }
+    .proxy-group li a {
+        padding: 6px 10px;
+    }
+
+    /* Games section responsive adjustment */
+    #games {
+        max-height: calc(100vh - 180px); /* Adjusted to match potential main padding-top change */
+    }
+    /* Theme switcher responsive */
+    #themes .theme-switcher { /* Specific targeting for themes section */
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .theme-button {
+        width: 100%;
+    }
+}
