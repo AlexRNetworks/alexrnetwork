@@ -1,35 +1,36 @@
+/* Your Original CSS Starts Here - Exactly as you provided */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Default background for fallback */ [cite: 38]
-    color: #fff; /* Default text color */ [cite: 39]
-    overflow: hidden; /* Prevent scrollbars due to animation */ [cite: 40]
-    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for theme changes */ [cite: 41]
+    background-color: #121212; /* Default background for fallback */
+    color: #fff; /* Default text color */
+    overflow: hidden; /* Prevent scrollbars due to animation */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for theme changes */
 }
 
 /* Default Theme Background */
 .animated-background {
     position: fixed;
     top: 0;
-    left: 0; [cite: 43]
+    left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg, #4158D0, #C850C0, #FFCC70);
     background-size: 300% 300%;
-    animation: gradientAnimation 10s infinite alternate; [cite: 43]
-    z-index: -1; [cite: 44]
-    transition: background 1s ease; /* Smooth transition for background changes */ [cite: 44]
+    animation: gradientAnimation 10s infinite alternate;
+    z-index: -1;
+    transition: background 1s ease; /* Smooth transition for background changes */
 }
 
 @keyframes gradientAnimation {
     0% {
-        background-position: 0% 50%; [cite: 44]
+        background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%; [cite: 45]
+        background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%; [cite: 46]
+        background-position: 0% 50%;
     }
 }
 
@@ -37,140 +38,140 @@ body {
 
 /* Sci-Fi Theme */
 .theme-scifi .animated-background {
-    background: linear-gradient(90deg, #1a0033, #330066, #990099, #00ffff); [cite: 47]
-    background-size: 400% 400%; [cite: 48]
+    background: linear-gradient(90deg, #1a0033, #330066, #990099, #00ffff);
+    background-size: 400% 400%;
     animation: scifiGradientAnimation 15s infinite alternate;
 }
 
 .theme-scifi header, .theme-scifi footer {
-    background-color: rgba(0, 50, 50, 0.7); /* Darker, slightly blueish */ [cite: 48]
-    box-shadow: 0 2px 15px rgba(0, 255, 255, 0.4); /* Neon blue glow */ [cite: 49]
+    background-color: rgba(0, 50, 50, 0.7); /* Darker, slightly blueish */
+    box-shadow: 0 2px 15px rgba(0, 255, 255, 0.4); /* Neon blue glow */
 }
 .theme-scifi nav ul li a {
-    color: #00ffff; /* Neon blue */ [cite: 50]
-    text-shadow: 0 0 5px #00ffff; [cite: 51]
+    color: #00ffff; /* Neon blue */
+    text-shadow: 0 0 5px #00ffff;
 }
 .theme-scifi nav ul li a:hover,
 .theme-scifi nav ul li a.active {
-    color: #ff00ff; /* Neon pink */ [cite: 52]
-    text-shadow: 0 0 8px #ff00ff; [cite: 53]
+    color: #ff00ff; /* Neon pink */
+    text-shadow: 0 0 8px #ff00ff;
 }
 .theme-scifi .content-section {
     background-color: rgba(0, 20, 20, 0.8);
-    border: 2px solid #00ffff; /* Neon blue border */ [cite: 54]
-    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3); [cite: 55]
+    border: 2px solid #00ffff; /* Neon blue border */
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
 }
 .theme-scifi .content-section h1,
 .theme-scifi .content-section h2 {
     color: #00ffff;
-    text-shadow: 0 0 5px #00ffff; [cite: 56]
+    text-shadow: 0 0 5px #00ffff;
 }
 .theme-scifi .call-to-action .button {
     background-color: #00ffff;
     color: #1a0033;
     text-shadow: none;
-    box-shadow: 0 0 10px #00ffff; [cite: 57]
+    box-shadow: 0 0 10px #00ffff;
 }
 .theme-scifi .call-to-action .button:hover {
     background-color: #ff00ff;
-    box-shadow: 0 0 15px #ff00ff; [cite: 58]
+    box-shadow: 0 0 15px #ff00ff;
 }
 .theme-scifi .proxy-list-container,
 .theme-scifi #games {
     border-color: #00ffff;
-    box-shadow: 0 0 8px rgba(0, 255, 255, 0.6); [cite: 59]
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
 }
 .theme-scifi #proxies h3 {
     border-color: #00ffff;
-    color: #00ffff; [cite: 60]
+    color: #00ffff;
 }
 .theme-scifi .proxy-group li a {
-    color: #00ccff; /* Lighter neon blue */ [cite: 61]
+    color: #00ccff; /* Lighter neon blue */
 }
 .theme-scifi .proxy-group li a:hover {
-    background-image: linear-gradient(90deg, #ff00ff, #00ffff, #00ff00); /* Sci-fi gradient */ [cite: 62]
-    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7); [cite: 63]
+    background-image: linear-gradient(90deg, #ff00ff, #00ffff, #00ff00); /* Sci-fi gradient */
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
 }
 .theme-scifi ::-webkit-scrollbar-thumb {
     background-color: #00ffff;
 }
 .theme-scifi ::-webkit-scrollbar-thumb:hover {
-    background-color: #ff00ff; [cite: 64]
+    background-color: #ff00ff;
 }
 
 @keyframes scifiGradientAnimation {
     0% {
-        background-position: 0% 50%; [cite: 65]
+        background-position: 0% 50%;
     }
     100% {
-        background-position: 100% 50%; [cite: 66]
+        background-position: 100% 50%;
     }
 }
 
-/* War Theme (Replaces Serene Ocean) */ [cite: 68]
+/* War Theme (Replaces Serene Ocean) */
 .theme-war .animated-background {
-    background: linear-gradient(135deg, #222, #4a0404, #8b0000, #402409); /* Gritty, metallic, fiery tones */ [cite: 68]
+    background: linear-gradient(135deg, #222, #4a0404, #8b0000, #402409); /* Gritty, metallic, fiery tones */
     background-size: 300% 300%;
-    animation: warGradientAnimation 18s infinite alternate; [cite: 68]
+    animation: warGradientAnimation 18s infinite alternate;
 }
 .theme-war header, .theme-war footer {
-    background-color: rgba(30, 20, 20, 0.8); [cite: 69]
-    box-shadow: 0 2px 10px rgba(200, 0, 0, 0.4); [cite: 70]
+    background-color: rgba(30, 20, 20, 0.8);
+    box-shadow: 0 2px 10px rgba(200, 0, 0, 0.4);
 }
 .theme-war nav ul li a {
-    color: #d1b64e; /* Aged gold/brass */ [cite: 70]
+    color: #d1b64e; /* Aged gold/brass */
 }
 .theme-war nav ul li a:hover,
 .theme-war nav ul li a.active {
-    color: #ff4500; /* Orange-red */ [cite: 71]
+    color: #ff4500; /* Orange-red */
 }
 .theme-war .content-section {
     background-color: rgba(20, 10, 10, 0.7);
-    border: 2px solid #8b0000; /* Dark red */ [cite: 72]
-    box-shadow: 0 5px 20px rgba(139, 0, 0, 0.3); [cite: 73]
+    border: 2px solid #8b0000; /* Dark red */
+    box-shadow: 0 5px 20px rgba(139, 0, 0, 0.3);
 }
 .theme-war .content-section h1,
 .theme-war .content-section h2 {
     color: #d1b64e;
-    text-shadow: 1px 1px 3px #000; [cite: 74]
+    text-shadow: 1px 1px 3px #000;
 }
 .theme-war .call-to-action .button {
     background-color: #b30000; /* Darker red */
     color: #fff;
-    text-shadow: none; [cite: 75]
+    text-shadow: none;
 }
 .theme-war .call-to-action .button:hover {
-    background-color: #ff4500; /* Explosive orange-red */ [cite: 76]
+    background-color: #ff4500; /* Explosive orange-red */
 }
 .theme-war .proxy-list-container,
 .theme-war #games {
-    border-color: #8b0000; [cite: 76]
-    box-shadow: 0 0 8px rgba(139, 0, 0, 0.6); [cite: 77]
+    border-color: #8b0000;
+    box-shadow: 0 0 8px rgba(139, 0, 0, 0.6);
 }
 .theme-war #proxies h3 {
     border-color: #d1b64e;
-    color: #d1b64e; [cite: 77]
+    color: #d1b64e;
 }
 .theme-war .proxy-group li a {
-    color: #c0c0c0; /* Dull silver */ [cite: 78]
+    color: #c0c0c0; /* Dull silver */
 }
 .theme-war .proxy-group li a:hover {
-    background-image: linear-gradient(90deg, #d1b64e, #ff4500, #8b0000); /* Fiery gradient */ [cite: 79]
-    text-shadow: 0 0 8px rgba(255, 69, 0, 0.5); [cite: 80]
+    background-image: linear-gradient(90deg, #d1b64e, #ff4500, #8b0000); /* Fiery gradient */
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.5);
 }
 .theme-war ::-webkit-scrollbar-thumb {
     background-color: #b30000;
 }
 .theme-war ::-webkit-scrollbar-thumb:hover {
-    background-color: #ff4500; [cite: 81]
+    background-color: #ff4500;
 }
 
 @keyframes warGradientAnimation {
     0% {
-        background-position: 0% 50%; [cite: 82]
+        background-position: 0% 50%;
     }
     100% {
-        background-position: 100% 50%; [cite: 83]
+        background-position: 100% 50%;
     }
 }
 
@@ -184,125 +185,515 @@ body {
         #00ff00 10%,
         #0000ff 10%,
         #0000ff 15%
-    ); [cite: 84]
-    background-size: 400% 400%; [cite: 85]
-    animation: arcadeScanline 0.5s linear infinite, arcadeGradientAnimation 10s infinite alternate; [cite: 85]
+    );
+    background-size: 400% 400%;
+    animation: arcadeScanline 0.5s linear infinite, arcadeGradientAnimation 10s infinite alternate;
 }
 @keyframes arcadeScanline {
     from { background-position: 0 0; }
-    to { background-position: 0 100%; } [cite: 86]
+    to { background-position: 0 100%; }
 }
 @keyframes arcadeGradientAnimation {
     0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; } [cite: 87]
+    100% { background-position: 100% 100%; }
 }
 .theme-arcade body { /* This was .theme-arcade body, which is less specific. Applied to .theme-arcade directly for text-shadow */
-    text-shadow: 1px 1px 0 #000; [cite: 88]
+    text-shadow: 1px 1px 0 #000;
 }
 .theme-arcade header, .theme-arcade footer {
-    background-color: rgba(30, 0, 40, 0.8); [cite: 89]
-    box-shadow: 0 2px 15px rgba(255, 0, 255, 0.6); [cite: 90]
+    background-color: rgba(30, 0, 40, 0.8);
+    box-shadow: 0 2px 15px rgba(255, 0, 255, 0.6);
 }
 .theme-arcade nav ul li a {
-    color: #fce803; /* Bright yellow */ [cite: 90]
-    /* font-family: 'Press Start 2P', cursive; */ /* Example retro font - you'd need to import this */ [cite: 91]
-    text-shadow: 2px 2px #ff00ff; [cite: 92]
+    color: #fce803; /* Bright yellow */
+    /* font-family: 'Press Start 2P', cursive; */ /* Example retro font - you'd need to import this */
+    text-shadow: 2px 2px #ff00ff;
 }
 .theme-arcade nav ul li a:hover,
 .theme-arcade nav ul li a.active {
-    color: #00ff00; /* Bright green */ [cite: 93]
-    text-shadow: 2px 2px #ff00ff, -2px -2px #0000ff; [cite: 94]
+    color: #00ff00; /* Bright green */
+    text-shadow: 2px 2px #ff00ff, -2px -2px #0000ff;
 }
 .theme-arcade .content-section {
     background-color: rgba(50, 0, 70, 0.8);
-    border: 2px solid #ff00ff; /* Neon pink border */ [cite: 95]
-    box-shadow: 0 5px 20px rgba(255, 0, 255, 0.5); [cite: 96]
+    border: 2px solid #ff00ff; /* Neon pink border */
+    box-shadow: 0 5px 20px rgba(255, 0, 255, 0.5);
 }
 .theme-arcade .content-section h1,
 .theme-arcade .content-section h2 {
-    color: #fce803; /* Bright yellow */ [cite: 97]
-    text-shadow: 3px 3px #000, 1px 1px #ff00ff; [cite: 98]
+    color: #fce803; /* Bright yellow */
+    text-shadow: 3px 3px #000, 1px 1px #ff00ff;
 }
 .theme-arcade .content-section p {
     color: #e0e0e0;
 }
 .theme-arcade .call-to-action .button {
-    background-color: #00ff00; /* Bright green */ [cite: 99]
+    background-color: #00ff00; /* Bright green */
     color: #000;
     text-shadow: 1px 1px #ff00ff;
-    box-shadow: 0 0 15px #00ff00; [cite: 100]
+    box-shadow: 0 0 15px #00ff00;
 }
 .theme-arcade .call-to-action .button:hover {
-    background-color: #ff0000; /* Bright red */ [cite: 101]
-    box-shadow: 0 0 20px #ff0000; [cite: 101]
+    background-color: #ff0000; /* Bright red */
+    box-shadow: 0 0 20px #ff0000;
 }
 .theme-arcade .proxy-list-container,
 .theme-arcade #games {
     border-color: #ff00ff;
-    box-shadow: 0 0 10px rgba(255, 0, 255, 0.7); [cite: 102]
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
 }
 .theme-arcade #proxies h3 {
     border-color: #fce803;
     color: #fce803;
-    text-shadow: 1px 1px #ff00ff; [cite: 103]
+    text-shadow: 1px 1px #ff00ff;
 }
 .theme-arcade .proxy-group li a {
     color: #00ffff; /* Cyan */
-    text-shadow: 1px 1px #000; [cite: 104]
+    text-shadow: 1px 1px #000;
 }
 .theme-arcade .proxy-group li a:hover {
-    background-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff00ff, #fce803); [cite: 105]
+    background-image: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff00ff, #fce803);
     text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
 }
 .theme-arcade ::-webkit-scrollbar-thumb {
-    background-color: #ff00ff; [cite: 106]
+    background-color: #ff00ff;
 }
 .theme-arcade ::-webkit-scrollbar-thumb:hover {
     background-color: #fce803;
 }
 
+/* --- End Theme Specific Styles (Original) --- */
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Smooth header transitions */
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.site-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #eee;
+    text-shadow: 1px 1px 3px #000;
+    margin: 0;
+    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth title transitions */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    padding: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #eee;
+}
+
+main {
+    padding: 80px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.content-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 90%;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */
+}
+
+.content-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section h1,
+.content-section h2 {
+    color: #eee;
+    margin-bottom: 20px;
+    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth text transitions */
+}
+
+.content-section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: color 0.5s ease; /* Smooth text transitions */
+}
+
+.content-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+    color: #ccc;
+    transition: color 0.5s ease; /* Smooth text transitions */
+}
+
+.call-to-action .button {
+    display: inline-block;
+    background-color: #5865F2;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.5s ease; /* Added theme transitions */
+}
+
+.call-to-action .button:hover {
+    background-color: #434dab;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #777;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease; /* Smooth footer transitions */
+}
+
+/* iframe specific styling */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Adjustments for the content-section specifically for games */
+#games {
+    max-width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */
+}
+
+#games h2 {
+    margin-bottom: 15px;
+}
+
+#games p {
+    margin-bottom: 20px;
+}
+
+/* Custom Scrollbar Styling for Games Section and Proxy List */
+#games::-webkit-scrollbar,
+.proxy-list-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+#games::-webkit-scrollbar-track,
+.proxy-list-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#games::-webkit-scrollbar-thumb,
+.proxy-list-container::-webkit-scrollbar-thumb {
+    background-color: #5865F2; /* Default blue for scrollbar thumb */
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease; /* Smooth transition for scrollbar theme changes */
+}
+
+#games::-webkit-scrollbar-thumb:hover,
+.proxy-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: #7289DA;
+}
+
+
+/* PROXY LIST CONTAINER STYLING */
+#proxies h3 {
+    color: #eee;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #5865F2;
+    padding-bottom: 5px;
+    display: inline-block;
+    transition: color 0.5s ease, border-color 0.5s ease, text-shadow 0.5s ease; /* Smooth theme transitions */
+}
+
+.proxy-list-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #5865F2;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
+
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right: 30px;
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Smooth theme transitions */
+}
+
+.proxy-group {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.proxy-group li {
+    margin-bottom: 8px;
+}
+
+.proxy-group li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: normal;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-size: 200% auto;
+    background-position: 0% 0%;
+    position: relative;
+}
+
+.proxy-group li a:hover {
+    background-image: linear-gradient(90deg, #4158D0, #C850C0, #FFCC70);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(10px) scale(1.02);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    color: initial;
+}
+
+/* --- Theme Switcher Section Styles --- */
+/* Ensure theme-switcher is centered within its content-section */
+#themes .theme-switcher { /* Target the specific theme-switcher within the themes section */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if container has defined height */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    /* No need for specific max-width here, content-section already limits it */
+}
+
+.theme-button {
+    background-color: #5865F2; /* Default button color */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.theme-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.theme-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding-top: 150px;
+    }
+    .content-section {
+        padding: 20px;
+    }
+    .iframe-container {
+        padding-bottom: 75%;
+    }
+    header {
+        padding: 10px;
+    }
+    .header-top {
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    .header-logo {
+        margin-right: 0;
+        margin-bottom: 5px;
+        height: 30px;
+    }
+    .site-title {
+        font-size: 24px;
+    }
+    nav ul li {
+        margin: 0 8px;
+    }
+
+    /* Proxy List Responsive Adjustments */
+    .proxy-list-container {
+        max-width: 95%;
+        max-height: 350px;
+        padding-right: 20px;
+    }
+    #proxies h3 {
+        font-size: 1.5em;
+    }
+    .proxy-group li a {
+        padding: 6px 10px;
+    }
+
+    /* Games section responsive adjustment */
+    #games {
+        max-height: calc(100vh - 180px);
+    }
+    /* Theme switcher responsive */
+    #themes .theme-switcher { /* Specific targeting for themes section */
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .theme-button {
+        width: 100%;
+    }
+}
+/* Your Original CSS Ends Here */
+
+/* --- New Themes - Appended Below --- */
+
 /* --- Minecraft Theme --- */
 .theme-minecraft .animated-background {
     background: linear-gradient(to bottom, #70D1F4 0%, #87CEEB 100%); /* Sky blue */
-    animation: none; /* Minecraft doesn't typically have animated sky gradients like this */
+    animation: none; 
 }
-.theme-minecraft { /* Applied to .theme-minecraft directly */
-    color: #333; /* Darker text for better readability on lighter backgrounds */
+.theme-minecraft {
+    color: #333; 
 }
 .theme-minecraft header, .theme-minecraft footer {
-    background-color: rgba(85, 54, 33, 0.85); /* Dark wood/dirt color */
+    background-color: rgba(85, 54, 33, 0.85); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    border-bottom: 3px solid #3A2417; /* Darker wood edge */
+    border-bottom: 3px solid #3A2417; 
 }
 .theme-minecraft .site-title, .theme-minecraft footer p {
     color: #FFF;
     text-shadow: 1px 1px 2px #3A2417;
 }
 .theme-minecraft nav ul li a {
-    color: #A4E785; /* Light green */
+    color: #A4E785; 
+    text-shadow: none; 
 }
 .theme-minecraft nav ul li a:hover,
 .theme-minecraft nav ul li a.active {
-    color: #FFF; /* White */
-    background-color: rgba(70, 130, 50, 0.5); /* Semi-transparent grass green */
+    color: #FFF; 
+    background-color: rgba(70, 130, 50, 0.5); 
     border-radius: 3px;
+    text-shadow: none;
 }
 .theme-minecraft .content-section {
-    background-color: rgba(210, 210, 210, 0.85); /* Stone color */
-    border: 3px solid #888; /* Stone border */
+    background-color: rgba(210, 210, 210, 0.85); 
+    border: 3px solid #888; 
     box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 0 3px 5px rgba(0,0,0,0.2);
-    border-radius: 2px; /* Sharper edges */
+    border-radius: 2px; 
 }
 .theme-minecraft .content-section h1,
 .theme-minecraft .content-section h2 {
-    color: #4A4A4A; /* Dark gray, like text on signs */
+    color: #4A4A4A; 
     text-shadow: 1px 1px #FFF;
 }
 .theme-minecraft .content-section p {
     color: #333;
 }
 .theme-minecraft .call-to-action .button {
-    background-color: #7DB155; /* Grass green */
+    background-color: #7DB155; 
     color: #fff;
     text-shadow: 1px 1px #3A6520;
     border: 2px solid #58833A;
@@ -311,42 +702,48 @@ body {
 }
 .theme-minecraft .call-to-action .button:hover {
     background-color: #6A9C43;
-    transform: scale(1.03);
+    transform: scale(1.03); 
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3); 
 }
 .theme-minecraft .proxy-list-container {
-    background-color: rgba(189, 180, 166, 0.9); /* Lighter stone/dirt mix */
-    border-color: #79706C; /* Darker stone */
+    background-color: rgba(189, 180, 166, 0.9); 
+    border-color: #79706C; 
     box-shadow: 0 0 8px rgba(0,0,0,0.4);
 }
 .theme-minecraft #proxies h3 {
-    border-color: #7DB155; /* Grass green */
+    border-color: #7DB155; 
     color: #4A4A4A;
+    text-shadow: none; 
 }
 .theme-minecraft .proxy-group li a {
-    color: #3A6520; /* Darker green */
+    color: #3A6520; 
     background-color: rgba(220,220,220,0.7);
     border: 1px solid #AEAEAE;
     border-radius: 2px;
+    text-shadow: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
 }
 .theme-minecraft .proxy-group li a:hover {
     background-color: #FFF;
     color: #7DB155;
-    text-shadow: none; /* remove inherited text-shadow if any */
-    -webkit-background-clip: initial; /* Override potential inherited webkit properties */
+    text-shadow: none;
+    transform: translateX(5px); 
+    -webkit-background-clip: initial;
     background-clip: initial;
-    -webkit-text-fill-color: initial;
-    transform: translateX(5px);
+    -webkit-text-fill-color: initial; 
 }
 .theme-minecraft ::-webkit-scrollbar {
     width: 14px;
 }
 .theme-minecraft ::-webkit-scrollbar-track {
-    background: #BDB4A6; /* Dirt path color */
+    background: #BDB4A6; 
 }
 .theme-minecraft ::-webkit-scrollbar-thumb {
-    background-color: #705A4F; /* Wood color */
+    background-color: #705A4F; 
     border-radius: 2px;
-    border: 2px solid #543F35; /* Darker wood */
+    border: 2px solid #543F35; 
 }
 .theme-minecraft ::-webkit-scrollbar-thumb:hover {
     background-color: #8A705A;
@@ -361,36 +758,38 @@ body {
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 100%; }
 }
-.theme-blackops2 { /* Applied to .theme-blackops2 directly */
-    color: #D5D5D5; /* Light grey text */
+.theme-blackops2 {
+    color: #D5D5D5; 
 }
 .theme-blackops2 header, .theme-blackops2 footer {
-    background-color: rgba(10, 18, 24, 0.85); /* Very dark blue/grey */
-    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.3); /* BO2 Orange glow */
+    background-color: rgba(10, 18, 24, 0.85); 
+    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.3); 
     border-bottom: 1px solid rgba(255, 107, 0, 0.2);
 }
 .theme-blackops2 .site-title {
-    color: #FF6B00; /* BO2 Orange */
+    color: #FF6B00; 
     text-shadow: 0 0 5px rgba(255, 107, 0, 0.7), 1px 1px 2px #000;
 }
 .theme-blackops2 nav ul li a {
-    color: #00BFFF; /* Deep sky blue / Tealish */
-    font-weight: 600;
+    color: #00BFFF; 
+    font-weight: 600; 
+    text-shadow: none; 
 }
 .theme-blackops2 nav ul li a:hover,
 .theme-blackops2 nav ul li a.active {
-    color: #FF6B00; /* Orange */
+    color: #FF6B00; 
     text-shadow: 0 0 3px rgba(255, 107, 0, 0.5);
+    background-color: transparent; 
 }
 .theme-blackops2 .content-section {
-    background-color: rgba(20, 30, 42, 0.8); /* Darker content area */
-    border: 1px solid rgba(0, 191, 255, 0.3); /* Blue border */
+    background-color: rgba(20, 30, 42, 0.8); 
+    border: 1px solid rgba(0, 191, 255, 0.3); 
     box-shadow: inset 0 0 15px rgba(0,0,0,0.4), 0 0 10px rgba(0, 191, 255, 0.1);
-    border-radius: 4px; /* Slightly sharper than default */
+    border-radius: 4px; 
 }
 .theme-blackops2 .content-section h1,
 .theme-blackops2 .content-section h2 {
-    color: #FF6B00; /* Orange headings */
+    color: #FF6B00; 
     text-shadow: 0 0 4px rgba(255, 107, 0, 0.5);
 }
 .theme-blackops2 .call-to-action .button {
@@ -399,10 +798,12 @@ body {
     text-shadow: 1px 1px #000;
     border: 1px solid #CC5600;
     border-radius: 3px;
+    box-shadow: none; 
 }
 .theme-blackops2 .call-to-action .button:hover {
     background-color: #E65A00;
     box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+    transform: scale(1.05); 
 }
 .theme-blackops2 .proxy-list-container {
     background-color: rgba(15, 22, 30, 0.9);
@@ -415,13 +816,19 @@ body {
     text-shadow: 0 0 3px rgba(0, 191, 255, 0.4);
 }
 .theme-blackops2 .proxy-group li a {
-    color: #A0DFFF; /* Lighter blue */
+    color: #A0DFFF; 
+    background-image: none; 
+    text-shadow: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
 }
 .theme-blackops2 .proxy-group li a:hover {
     background-image: linear-gradient(to right, rgba(255,107,0,0.2), rgba(0,191,255,0.2));
     color: #FFF;
     text-shadow: 0 0 5px #FFF;
-    -webkit-background-clip: initial;
+    transform: translateX(10px) scale(1.02); 
+    -webkit-background-clip: initial; 
     background-clip: initial;
     -webkit-text-fill-color: initial;
 }
@@ -441,10 +848,10 @@ body {
     0% { background-position: 0% 10%; }
     100% { background-position: 100% 90%; }
 }
-.theme-neotokyo { /* Applied to .theme-neotokyo directly */
-    color: #E0E0E0; /* Default text color for theme */
+.theme-neotokyo {
+    color: #E0E0E0; 
 }
-.theme-neotokyo::before { /* Body pseudo element for scanlines */
+.theme-neotokyo::before { 
     content: "";
     position: fixed;
     top: 0; left: 0;
@@ -452,49 +859,48 @@ body {
     background: repeating-linear-gradient(
         transparent,
         transparent 2px,
-        rgba(255, 0, 255, 0.03) 2px, /* Faint magenta scanline */
+        rgba(255, 0, 255, 0.03) 2px, 
         rgba(0, 255, 255, 0.03) 3px
     );
     animation: neotokyoScanlines 2s linear infinite;
-    z-index: -2; /* Behind main animated background */
+    z-index: -2; 
     pointer-events: none;
 }
 @keyframes neotokyoScanlines {
     0% { background-position: 0 0; }
-    100% { background-position: 0 50px; } /* Adjust speed of scanlines */
+    100% { background-position: 0 50px; }
 }
 .theme-neotokyo header, .theme-neotokyo footer {
-    background-color: rgba(10, 0, 20, 0.7); /* Dark purple, almost black */
-    box-shadow: 0 2px 15px rgba(255, 0, 255, 0.5), 0 0 5px rgba(0, 255, 255, 0.3); /* Magenta and Cyan glow */
-    backdrop-filter: blur(5px); 
+    background-color: rgba(10, 0, 20, 0.7); 
+    box-shadow: 0 2px 15px rgba(255, 0, 255, 0.5), 0 0 5px rgba(0, 255, 255, 0.3); 
 }
 .theme-neotokyo .site-title {
-    color: #FF00FF; /* Bright Magenta */
+    color: #FF00FF; 
     text-shadow: 0 0 8px #FF00FF, 0 0 12px #FF00FF, 0 0 3px #FFF;
 }
 .theme-neotokyo nav ul li a {
-    color: #00FFFF; /* Cyan */
+    color: #00FFFF; 
     text-shadow: 0 0 5px #00FFFF;
 }
 .theme-neotokyo nav ul li a:hover,
 .theme-neotokyo nav ul li a.active {
     color: #FFF;
-    background-color: rgba(255, 0, 255, 0.2); /* Magenta transparent bg */
+    background-color: rgba(255, 0, 255, 0.2); 
     text-shadow: 0 0 8px #FF00FF, 0 0 5px #FFF;
     border-radius: 3px;
 }
 .theme-neotokyo .content-section {
-    background-color: rgba(25, 0, 45, 0.75); /* Dark translucent purple */
-    border: 1px solid #FF00FF; /* Magenta border */
+    background-color: rgba(25, 0, 45, 0.75); 
+    border: 1px solid #FF00FF; 
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.3), inset 0 0 10px rgba(0,0,0,0.5);
 }
 .theme-neotokyo .content-section h1,
 .theme-neotokyo .content-section h2 {
-    color: #00FFFF; /* Cyan */
+    color: #00FFFF; 
     text-shadow: 0 0 6px #00FFFF, 0 0 10px #00FFFF;
 }
 .theme-neotokyo .content-section p {
-    color: #E0E0E0; /* Light grey for readability */
+    color: #E0E0E0; 
 }
 .theme-neotokyo .call-to-action .button {
     background-color: #FF00FF;
@@ -506,8 +912,10 @@ body {
 .theme-neotokyo .call-to-action .button:hover {
     background-color: #00FFFF;
     color: #000;
+    text-shadow: none; 
     border-color: #00CCCC;
     box-shadow: 0 0 10px #00FFFF, 0 0 15px #00FFFF inset;
+    transform: scale(1.05);
 }
 .theme-neotokyo .proxy-list-container {
     background-color: rgba(15, 0, 25, 0.8);
@@ -520,7 +928,12 @@ body {
     text-shadow: 0 0 5px #FF00FF;
 }
 .theme-neotokyo .proxy-group li a {
-    color: #B0FFFF; /* Lighter cyan */
+    color: #B0FFFF; 
+    text-shadow: none; 
+    background-image: none; 
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
 }
 .theme-neotokyo .proxy-group li a:hover {
     background-image: linear-gradient(90deg, #FF00FF, #00FFFF);
@@ -528,395 +941,14 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    color: initial; /* Reset color to allow gradient to show */
+    color: initial; 
+    transform: translateX(10px) scale(1.02); 
 }
 .theme-neotokyo ::-webkit-scrollbar-thumb {
-    background-color: #FF00FF; /* Magenta */
+    background-color: #FF00FF; 
 }
 .theme-neotokyo ::-webkit-scrollbar-thumb:hover {
-    background-color: #00FFFF; /* Cyan */
+    background-color: #00FFFF; 
 }
 
-/* --- End Theme Specific Styles --- */
-
-header {
-    background-color: rgba(0, 0, 0, 0.8); [cite: 107]
-    padding: 20px; [cite: 108]
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    backdrop-filter: blur(10px); [cite: 109]
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.5s ease, box-shadow 0.5s ease; [cite: 109]
-}
-
-.header-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10px; [cite: 110]
-}
-
-.header-logo {
-    height: 40px;
-    width: auto;
-    margin-right: 15px;
-    vertical-align: middle;
-}
-
-.site-title {
-    font-size: 32px; [cite: 111]
-    font-weight: bold; [cite: 112]
-    color: #eee;
-    text-shadow: 1px 1px 3px #000;
-    margin: 0;
-    transition: color 0.5s ease, text-shadow 0.5s ease; [cite: 112]
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    max-width: 100%; [cite: 113]
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; [cite: 114]
-}
-
-nav ul li {
-    margin: 0 15px; [cite: 115]
-    padding: 5px 0; [cite: 116]
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #bbb;
-    font-weight: bold;
-    transition: color 0.3s ease; [cite: 116]
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #eee; [cite: 117]
-}
-
-main {
-    padding: 80px 20px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; [cite: 118]
-    text-align: center;
-    padding-top: 250px;
-}
-
-.content-section {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 10px; [cite: 119]
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); [cite: 120]
-    max-width: 800px;
-    width: 90%;
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(20px); [cite: 120]
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */ [cite: 121]
-}
-
-.content-section.active {
-    opacity: 1;
-    transform: translateY(0); [cite: 122]
-}
-
-.content-section h1,
-.content-section h2 {
-    color: #eee;
-    margin-bottom: 20px;
-    transition: color 0.5s ease, text-shadow 0.5s ease; /* Smooth text transitions */ [cite: 123]
-}
-
-.content-section p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-    transition: color 0.5s ease; /* Smooth text transitions */ [cite: 124]
-}
-
-.content-section ul {
-    list-style: none;
-    padding: 0; [cite: 125]
-}
-
-.content-section ul li {
-    margin-bottom: 10px;
-    color: #ccc;
-    transition: color 0.5s ease; /* Smooth text transitions */ [cite: 126]
-}
-
-.call-to-action .button {
-    display: inline-block;
-    background-color: #5865F2;
-    color: #fff;
-    padding: 15px 30px; [cite: 127]
-    text-decoration: none; [cite: 128]
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.5s ease; /* Added theme transitions */ [cite: 128]
-}
-
-.call-to-action .button:hover {
-    background-color: #434dab;
-    transform: scale(1.05); [cite: 129]
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #777;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed; [cite: 130]
-    bottom: 0; [cite: 131]
-    left: 0;
-    width: 100%;
-    z-index: 99;
-    backdrop-filter: blur(10px);
-    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease; /* Smooth footer transitions */ [cite: 131]
-}
-
-/* iframe specific styling */
-.iframe-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; [cite: 132]
-    padding-bottom: 75%; [cite: 133]
-    height: 0;
-    overflow: hidden;
-    background-color: #000;
-    border-radius: 8px;
-    box-shadow: inset 0 0 15px rgba(0,0,0,0.5); [cite: 133]
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none; [cite: 134]
-}
-
-/* Adjustments for the content-section specifically for games */
-#games {
-    max-width: 95%;
-    height: auto;
-    display: flex; [cite: 135]
-    flex-direction: column; [cite: 136]
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px 20px;
-    max-height: calc(100vh - 250px);
-    overflow-y: auto; [cite: 136]
-    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Added theme transitions */ [cite: 137]
-}
-
-#games h2 {
-    margin-bottom: 15px;
-}
-
-#games p {
-    margin-bottom: 20px; [cite: 138]
-}
-
-/* Custom Scrollbar Styling for Games Section and Proxy List */
-#games::-webkit-scrollbar,
-.proxy-list-container::-webkit-scrollbar {
-    width: 12px; [cite: 139]
-}
-
-#games::-webkit-scrollbar-track,
-.proxy-list-container::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-#games::-webkit-scrollbar-thumb,
-.proxy-list-container::-webkit-scrollbar-thumb {
-    background-color: #5865F2; /* Default blue for scrollbar thumb */ [cite: 140]
-    border-radius: 10px;
-    border: 3px solid rgba(0, 0, 0, 0.5); [cite: 141]
-    transition: background-color 0.5s ease; /* Smooth transition for scrollbar theme changes */ [cite: 142]
-}
-
-#games::-webkit-scrollbar-thumb:hover,
-.proxy-list-container::-webkit-scrollbar-thumb:hover {
-    background-color: #7289DA; [cite: 142]
-}
-
-
-/* PROXY LIST CONTAINER STYLING */
-#proxies h3 {
-    color: #eee;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.8em; [cite: 143]
-    border-bottom: 2px solid #5865F2; [cite: 144]
-    padding-bottom: 5px;
-    display: inline-block;
-    transition: color 0.5s ease, border-color 0.5s ease, text-shadow 0.5s ease; /* Smooth theme transitions */ [cite: 144]
-}
-
-.proxy-list-container {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 2px solid #5865F2;
-    border-radius: 10px; [cite: 145]
-    padding: 20px; [cite: 146]
-    width: 100%;
-    max-width: 600px;
-    margin: 30px auto;
-    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
-
-    max-height: 400px; [cite: 146]
-    overflow-y: auto; [cite: 147]
-    text-align: left;
-    padding-right: 30px;
-    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Smooth theme transitions */ [cite: 147]
-}
-
-.proxy-group {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px; [cite: 148]
-}
-
-.proxy-group li {
-    margin-bottom: 8px;
-}
-
-.proxy-group li a {
-    text-decoration: none;
-    color: #ccc; [cite: 149]
-    font-weight: normal; [cite: 150]
-    display: block;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-size: 200% auto;
-    background-position: 0% 0%; [cite: 150]
-    position: relative; [cite: 151]
-}
-
-.proxy-group li a:hover {
-    background-image: linear-gradient(90deg, #4158D0, #C850C0, #FFCC70);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; [cite: 151]
-    transform: translateX(10px) scale(1.02); [cite: 152]
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-    color: initial; [cite: 152]
-}
-
-/* --- Theme Switcher Section Styles --- */
-/* Ensure theme-switcher is centered within its content-section */
-#themes .theme-switcher { /* Target the specific theme-switcher within the themes section */ [cite: 153]
-    display: flex; [cite: 153]
-    flex-wrap: wrap; [cite: 154]
-    gap: 20px;
-    justify-content: center; /* Center horizontally */ [cite: 154]
-    align-items: center; [cite: 154]
-    margin-top: 30px;
-    padding: 20px; [cite: 155]
-    background-color: rgba(0, 0, 0, 0.4); [cite: 156]
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3); [cite: 156]
-}
-
-.theme-button {
-    background-color: #5865F2; /* Default button color */ [cite: 157]
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1em; [cite: 158]
-    cursor: pointer; [cite: 159]
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); [cite: 159]
-}
-
-.theme-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-.theme-button:active {
-    transform: translateY(0); [cite: 160]
-    box-shadow: none; [cite: 161]
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    main {
-        padding-top: 150px; [cite: 161]
-    }
-    .content-section {
-        padding: 20px; [cite: 162]
-    }
-    .iframe-container {
-        padding-bottom: 75%; [cite: 163]
-    }
-    header {
-        padding: 10px; [cite: 164]
-    }
-    .header-top {
-        flex-direction: column;
-        margin-bottom: 5px; [cite: 165]
-    }
-    .header-logo {
-        margin-right: 0;
-        margin-bottom: 5px;
-        height: 30px; [cite: 166]
-    }
-    .site-title {
-        font-size: 24px; [cite: 167]
-    }
-    nav ul li {
-        margin: 0 8px; [cite: 168]
-    }
-
-    /* Proxy List Responsive Adjustments */
-    .proxy-list-container {
-        max-width: 95%; [cite: 169]
-        max-height: 350px; [cite: 170]
-        padding-right: 20px;
-    }
-    #proxies h3 {
-        font-size: 1.5em; [cite: 170]
-    }
-    .proxy-group li a {
-        padding: 6px 10px; [cite: 171]
-    }
-
-    /* Games section responsive adjustment */
-    #games {
-        max-height: calc(100vh - 180px); [cite: 172]
-    }
-    /* Theme switcher responsive */
-    #themes .theme-switcher { /* Specific targeting for themes section */ [cite: 173]
-        flex-direction: column; [cite: 173]
-        gap: 15px; [cite: 174]
-        padding: 15px;
-    }
-    .theme-button {
-        width: 100%;
-    }
-}
+/* --- End of Appended New Themes --- */
