@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to get the current height of the fixed header
     function getHeaderHeight() {
         if (header) {
-            // offsetHeight includes padding and border, giving us the full rendered height
-            return header.offsetHeight;
+            return header.offsetHeight; // offsetHeight includes padding and border
         }
         return 0; // Fallback if header isn't found
     }
@@ -21,18 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetSection) {
             targetSection.classList.add('active');
 
-            // Calculate the target scroll position, accounting for the fixed header
-            const headerHeight = getHeaderHeight();
-            // getBoundingClientRect().top gives position relative to viewport
-            // window.pageYOffset gives current scroll position from top of document
-            const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+            // Defer the scroll slightly to ensure the section is visible and rendered
+            // This is crucial for fixing the "initial jump" and ensuring accurate measurements
+            requestAnimationFrame(() => {
+                const headerHeight = getHeaderHeight();
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                const scrollOffset = headerHeight + 30; // 30px buffer below the header. Adjust as desired.
 
-            // Scroll to the calculated position with an offset
-            // Subtract header height to move content below header
-            // Subtract an additional 20px as a buffer for more space below the header
-            window.scrollTo({
-                top: targetPosition - headerHeight - 20, // Adjust '-20' buffer as needed
-                behavior: 'smooth' // Smooth scrolling animation
+                window.scrollTo({
+                    top: targetPosition - scrollOffset,
+                    behavior: 'smooth' // Smooth scrolling animation
+                });
             });
         }
     }
@@ -65,12 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initial load - show the home section if no hash in URL, or the section specified by hash
-    if (window.location.hash) {
-        const initialId = window.location.hash.substring(1);
-        showSection(initialId); // This call will also handle the scrolling
-        setActiveLink(initialId);
-    } else {
-        showSection('home'); // This call will also handle the scrolling
-        setActiveLink('home');
-    }
+    // Added a small timeout for initial load to ensure everything is rendered
+    setTimeout(() => {
+        if (window.location.hash) {
+            const initialId = window.location.hash.substring(1);
+            showSection(initialId); // This call will now also handle scrolling
+            setActiveLink(initialId);
+        } else {
+            showSection('home'); // This call will also handle scrolling
+            setActiveLink('home');
+        }
+    }, 100); // 100ms delay. Adjust if needed for slower loading.
 });
