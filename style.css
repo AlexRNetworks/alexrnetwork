@@ -586,14 +586,19 @@ footer {
 /* iframe specific styling */
 .iframe-container {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    padding-bottom: 75%;
+    width: 100%; /* Takes full width of its parent (#games), up to max-width */
+    max-width: 800px; 
+    padding-bottom: 75%; 
     height: 0;
     overflow: hidden;
     background-color: #000;
     border-radius: 8px;
     box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+    /* These ensure it centers if #games is wider than 800px and #games is NOT a flex container. */
+    /* With #games as a flex container and align-items:center, these might be redundant for centering */
+    /* but are good practice for block elements with a max-width. */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .iframe-container iframe {
@@ -605,18 +610,21 @@ footer {
     border: none;
 }
 
-/* Adjustments for the content-section specifically for games */
-#games { /* This section is also a .content-section, so display:none/block applies */
+#games {
     max-width: 95%;
-    /* height: auto; - display:block will handle height based on content */
-    /* display: flex; - It's a block now, content inside flows normally */
-    /* flex-direction: column; */
-    /* justify-content: flex-start; */
-    /* align-items: center; */
-    padding: 40px 20px; /* Padding is fine */
-    max-height: calc(100vh - 220px); /* Adjust based on new main padding-top (180px + header estimate) */
-    overflow-y: auto; /* Scroll within this section if its content is too tall */
-    /* transition background-color etc. are inherited from .content-section */
+    /* --- UNCOMMENT/ADD THESE LINES TO CENTER CONTENT --- */
+    display: flex;            /* Makes #games a flex container */
+    flex-direction: column;   /* Stacks children vertically (h2, p, iframe-container) */
+    align-items: center;      /* Centers children horizontally */
+    /* --- END OF ADDED/UNCOMMENTED LINES --- */
+
+    padding: 40px 20px;
+    max-height: calc(100vh - 220px); /* Adjust based on main padding-top */
+    overflow-y: auto;
+    
+    /* To ensure #games section itself is centered within the main area if it's not full width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #games h2 {
