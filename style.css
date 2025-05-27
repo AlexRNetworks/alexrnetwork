@@ -513,7 +513,13 @@ main {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     width: 90%;
-    margin-bottom: 30px;
+    
+    /* --- ADD THESE TWO LINES FOR CENTERING --- */
+    margin-left: auto;
+    margin-right: auto;
+    /* --- END OF ADDED LINES --- */
+    
+    margin-bottom: 30px; /* Keep your existing bottom margin */
     
     /* MODIFIED for display:none strategy */
     display: none; /* Hidden by default, JS will manage display */
