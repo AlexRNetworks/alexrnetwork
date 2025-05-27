@@ -4,6 +4,7 @@ body {
     background-color: #121212;
     color: #fff;
     overflow: hidden; /* Prevent scrollbars due to animation */
+    scroll-padding-top: 150px; /* Add this line */
 }
 
 .animated-background {
