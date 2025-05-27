@@ -230,111 +230,27 @@ footer {
     width: 100%;
     max-width: 500px; /* Max width for the stacked tabs themselves */
     margin: 30px auto 0; /* Center the container and add top margin */
+
+    /* --- NEW SCROLLABLE PROPERTIES --- */
+    max-height: 400px; /* Set a maximum height for the container to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling when content exceeds max-height */
+    padding-right: 15px; /* Add padding to prevent content from hiding under scrollbar */
 }
 
-.proxy-tab {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 2px solid #5865F2; /* Blue border */
-    border-radius: 10px;
-    padding: 20px;
-    cursor: pointer;
-    text-align: center;
-    overflow: hidden; /* Hide overflowing dropdown content */
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4); /* Subtle blue glow */
-    position: relative; /* For dropdown positioning */
+/* --- CUSTOM SCROLLBAR STYLING (for Webkit browsers like Chrome, Safari, Edge) --- */
+.proxy-tabs-container::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
 }
 
-.proxy-tab:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 5px 15px rgba(88, 101, 242, 0.6), 0 0 20px rgba(88, 101, 242, 0.8); /* Stronger glow/shadow */
+.proxy-tabs-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5); /* Track background color */
+    border-radius: 10px; /* Rounded corners for the track */
 }
 
-.proxy-tab h3 {
-    color: #eee;
-    margin: 0;
-    font-size: 1.5em;
-    padding-bottom: 10px; /* Space above dropdown */
-    transition: color 0.3s ease;
+.proxy-tabs-container::-webkit-scrollbar-thumb {
+    background-color: #5865F2; /* Thumb color (your blue primary color) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid rgba(0, 0, 0, 0.5); /* Border around thumb (matches track background) */
 }
 
-.proxy-tab:hover h3 {
-    color: #fff; /* Slightly brighter on hover */
-}
-
-.proxy-dropdown {
-    max-height: 0; /* Initially hidden */
-    opacity: 0;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    margin-top: 10px; /* Space below title */
-}
-
-.proxy-tab:hover .proxy-dropdown {
-    max-height: 200px; /* Adjust based on expected content height */
-    opacity: 1;
-}
-
-.proxy-dropdown ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    text-align: center; /* Center proxy names */
-}
-
-.proxy-dropdown ul li {
-    color: #ccc;
-    padding: 5px 0;
-    font-size: 1.1em;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.1); /* Subtle separator */
-}
-
-.proxy-dropdown ul li:last-child {
-    border-bottom: none; /* No border for the last item */
-}
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    main {
-        padding-top: 150px; /* Adjusted responsive padding for smaller screens */
-    }
-    .content-section {
-        padding: 20px;
-    }
-    .iframe-container {
-        padding-bottom: 75%;
-    }
-    header {
-        padding: 10px;
-    }
-    .header-top {
-        flex-direction: column;
-        margin-bottom: 5px;
-    }
-    .header-logo {
-        margin-right: 0;
-        margin-bottom: 5px;
-        height: 30px;
-    }
-    .site-title {
-        font-size: 24px;
-    }
-    nav ul li {
-        margin: 0 8px;
-    }
-
-    /* Proxy Tabs Responsive Adjustments */
-    .proxy-tabs-container {
-        max-width: 90%; /* Allow tabs to take more width on small screens */
-    }
-    .proxy-tab {
-        padding: 15px; /* Smaller padding */
-    }
-    .proxy-tab h3 {
-        font-size: 1.3em; /* Smaller font size */
-    }
-    .proxy-dropdown ul li {
-        font-size: 1em; /* Smaller font size */
-    }
-}
+.proxy-tabs-container::-webkit-scrollbar-thumb:hover
