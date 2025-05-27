@@ -611,17 +611,15 @@ footer {
 }
 
 #games {
-    #games {
     max-width: 95%;
-    display: flex;            /* Ensures #games is a flex container */
-    flex-direction: column;   /* Stacks children vertically */
-    align-items: center;      /* Centers children (h2, p, iframe-container) horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 40px 20px;
-    max-height: calc(100vh - 220px); /* Adjust as needed */
-    overflow-y: auto;
-    margin-left: auto;       /* Centers the #games section itself in 'main' */
-    margin-right: auto;      /* Centers the #games section itself in 'main' */
-    /* It will inherit other .content-section styles like display:none/block toggle via JS */
+    max-height: calc(100vh - 220px); /* Or your adjusted value */
+    overflow-y: auto;                /* This is essential for the scrollbar */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #games h2 {
@@ -733,8 +731,9 @@ footer {
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
+/* Theme Switcher Button Styles */
 .theme-button {
-    background-color: #5865F2; 
+    background-color: #5865F2; /* Default button color */
     color: #fff;
     border: none;
     padding: 12px 25px;
