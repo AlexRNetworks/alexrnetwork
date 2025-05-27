@@ -4,7 +4,7 @@ body {
     background-color: #121212;
     color: #fff;
     overflow: hidden; /* Prevent scrollbars due to animation */
-    scroll-padding-top: 250px; /* Add this line */
+    /* Removed scroll-padding-top, now handled by JS */
 }
 
 .animated-background {
@@ -109,7 +109,8 @@ main {
     justify-content: center;
     min-height: 100vh;
     text-align: center;
-    padding-top: 250px; /* Increased padding to account for taller header */
+    /* Increased padding to account for taller header and ensure content starts below it */
+    padding-top: 250px; /* Adjust this value as needed based on your header's total height */
 }
 
 .content-section {
@@ -296,7 +297,7 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     main {
-        padding-top: 150px;
+        padding-top: 150px; /* Adjusted responsive padding for smaller screens */
     }
     .content-section {
         padding: 20px;
