@@ -4,7 +4,6 @@ body {
     background-color: #121212;
     color: #fff;
     overflow: hidden; /* Prevent scrollbars due to animation */
-    /* Removed scroll-padding-top, now handled by JS */
 }
 
 .animated-background {
@@ -146,32 +145,11 @@ main {
     padding: 0;
 }
 
+/* Default styling for general list items - not specific to proxy links */
 .content-section ul li {
     margin-bottom: 10px;
-    color: #ccc; /* Default color for list items if not links */
+    color: #ccc;
 }
-
-/* --- NEW LINK STYLING FOR PROXY DROPDOWNS --- */
-.proxy-dropdown ul li a {
-    text-decoration: none; /* Remove underline */
-    color: #ccc; /* Default color for proxy links */
-    font-weight: normal; /* Override bold from nav links if inherited */
-    display: inline-block; /* Allows padding and transformation */
-    padding: 5px 10px; /* Add some padding around the link text */
-    border-radius: 5px; /* Slightly rounded corners */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.proxy-dropdown ul li a:hover {
-    background-size: 200% auto; /* For gradient animation */
-    -webkit-background-clip: text; /* Clip background to text for gradient text */
-    background-clip: text;
-    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
-    background-image: linear-gradient(90deg, #4158D0, #C850C0, #FFCC70); /* Your rainbow gradient */
-    transform: scale(1.05); /* Slight scale up on hover */
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Subtle white glow */
-}
-/* --- END NEW LINK STYLING --- */
 
 
 .call-to-action .button {
@@ -238,114 +216,92 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Proxy Tabs Styling */
-#proxies {
-    /* Ensure the section is wide enough for the tabs */
-    max-width: 900px; /* Adjust as needed */
-    padding-bottom: 60px; /* Add space for potentially long dropdowns */
+/* --- NEW PROXY LIST CONTAINER STYLING --- */
+#proxies h3 { /* Style for individual proxy group headings */
+    color: #eee;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #5865F2; /* Underline for separation */
+    padding-bottom: 5px;
+    display: inline-block; /* To make border only as wide as text */
 }
 
-.proxy-tabs-container {
-    display: flex;
-    flex-direction: column; /* Stack tabs vertically */
-    gap: 20px; /* Space between tabs */
+.proxy-list-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #5865F2;
+    border-radius: 10px;
+    padding: 20px;
     width: 100%;
-    max-width: 500px; /* Max width for the stacked tabs themselves */
-    margin: 30px auto 0; /* Center the container and add top margin */
+    max-width: 600px; /* Adjust max-width as desired */
+    margin: 30px auto;
+    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
 
-    /* --- NEW SCROLLABLE PROPERTIES --- */
-    max-height: 400px; /* Set a maximum height for the container to enable scrolling */
-    overflow-y: auto; /* Enable vertical scrolling when content exceeds max-height */
-    padding-right: 15px; /* Add padding to prevent content from hiding under scrollbar */
+    max-height: 400px; /* Set a max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    text-align: left; /* Align text within the scrollable container */
+    padding-right: 30px; /* More padding on right for scrollbar clearance */
+}
+
+.proxy-group { /* Styling for each ul of proxy links */
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.proxy-group li {
+    margin-bottom: 8px; /* Space between links */
+}
+
+.proxy-group li a {
+    text-decoration: none; /* Remove underline */
+    color: #ccc; /* Default color for proxy links */
+    font-weight: normal;
+    display: block; /* Make the whole list item clickable area */
+    padding: 8px 15px; /* Padding for clickable area */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Ensure the gradient works smoothly over text */
+    background-size: 200% auto;
+    background-position: 0% 0%; /* Start gradient at the beginning */
+    position: relative; /* For text-shadow */
+}
+
+.proxy-group li a:hover {
+    background-image: linear-gradient(90deg, #4158D0, #C850C0, #FFCC70); /* Your rainbow gradient */
+    -webkit-background-clip: text; /* Clip background to text for gradient text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    transform: translateX(10px) scale(1.02); /* Slide right and slightly scale up on hover */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); /* Subtle white glow */
+    color: initial; /* Reset color to allow gradient to show */
 }
 
 /* --- CUSTOM SCROLLBAR STYLING (for Webkit browsers like Chrome, Safari, Edge) --- */
-.proxy-tabs-container::-webkit-scrollbar {
+.proxy-list-container::-webkit-scrollbar {
     width: 12px; /* Width of the scrollbar */
 }
 
-.proxy-tabs-container::-webkit-scrollbar-track {
+.proxy-list-container::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.5); /* Track background color */
     border-radius: 10px; /* Rounded corners for the track */
 }
 
-.proxy-tabs-container::-webkit-scrollbar-thumb {
+.proxy-list-container::-webkit-scrollbar-thumb {
     background-color: #5865F2; /* Thumb color (your blue primary color) */
     border-radius: 10px; /* Rounded corners for the thumb */
     border: 3px solid rgba(0, 0, 0, 0.5); /* Border around thumb (matches track background) */
 }
 
-.proxy-tabs-container::-webkit-scrollbar-thumb:hover {
+.proxy-list-container::-webkit-scrollbar-thumb:hover {
     background-color: #7289DA; /* Lighter blue on hover */
-}
-
-
-.proxy-tab {
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 2px solid #5865F2; /* Blue border */
-    border-radius: 10px;
-    padding: 20px;
-    cursor: pointer;
-    text-align: center;
-    overflow: hidden; /* Hide overflowing dropdown content initially */
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 8px rgba(88, 101, 242, 0.4); /* Subtle blue glow */
-    position: relative; /* For dropdown positioning */
-}
-
-.proxy-tab:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 5px 15px rgba(88, 101, 242, 0.6), 0 0 20px rgba(88, 101, 242, 0.8); /* Stronger glow/shadow */
-}
-
-.proxy-tab h3 {
-    color: #eee;
-    margin: 0;
-    font-size: 1.5em;
-    padding-bottom: 10px; /* Space above dropdown */
-    transition: color 0.3s ease;
-}
-
-.proxy-tab:hover h3 {
-    color: #fff; /* Slightly brighter on hover */
-}
-
-.proxy-dropdown {
-    max-height: 0; /* Initially hidden */
-    opacity: 0;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    margin-top: 10px; /* Space below title */
-}
-
-.proxy-tab:hover .proxy-dropdown {
-    max-height: 200px; /* Adjust based on expected content height */
-    opacity: 1;
-}
-
-.proxy-dropdown ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    text-align: center; /* Center proxy names */
-}
-
-.proxy-dropdown ul li {
-    color: #ccc; /* Fallback for li color, though a will override */
-    padding: 5px 0; /* Padding around list item */
-    font-size: 1.1em;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.1); /* Subtle separator */
-}
-
-.proxy-dropdown ul li:last-child {
-    border-bottom: none; /* No border for the last item */
 }
 
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     main {
-        padding-top: 150px; /* Adjusted responsive padding for smaller screens */
+        padding-top: 150px;
     }
     .content-section {
         padding: 20px;
@@ -372,18 +328,16 @@ footer {
         margin: 0 8px;
     }
 
-    /* Proxy Tabs Responsive Adjustments */
-    .proxy-tabs-container {
-        max-width: 90%; /* Allow tabs to take more width on small screens */
-        max-height: 300px; /* Adjust max-height for smaller screens */
+    /* Proxy List Responsive Adjustments */
+    .proxy-list-container {
+        max-width: 95%; /* Allow it to take more width on small screens */
+        max-height: 350px; /* Adjust max-height for smaller screens */
+        padding-right: 20px; /* Adjust padding for smaller screens */
     }
-    .proxy-tab {
-        padding: 15px; /* Smaller padding */
+    #proxies h3 {
+        font-size: 1.5em; /* Smaller headings */
     }
-    .proxy-tab h3 {
-        font-size: 1.3em; /* Smaller font size */
-    }
-    .proxy-dropdown ul li {
-        font-size: 1em; /* Smaller font size */
+    .proxy-group li a {
+        padding: 6px 10px;
     }
 }
