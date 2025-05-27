@@ -108,7 +108,7 @@ main {
     justify-content: center;
     min-height: 100vh;
     text-align: center;
-    padding-top: 150px; /* Increased padding to account for taller header */
+    padding-top: 250px; /* Increased padding to account for taller header */
 }
 
 .content-section {
