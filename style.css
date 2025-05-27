@@ -207,13 +207,18 @@ footer {
 #games {
     max-width: 95%;
     height: auto;
-    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align items to the start to allow scrolling from the top */
     align-items: center;
     padding: 40px 20px; /* Add some padding around the content */
-    overflow: auto; /* Enable scrolling if content overflows */
+    
+    /* --- CRITICAL CHANGE FOR GAMES SECTION SCROLLING --- */
+    /* Calculate a maximum height for the content-section itself, allowing for header and footer */
+    /* vh unit makes it relative to viewport height. 100vh - header height - footer height - margins/padding */
+    max-height: calc(100vh - 250px); /* 250px approx for header + top/bottom main padding */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+    /* ---------------------------------------------------- */
 }
 
 #games h2 {
@@ -225,6 +230,7 @@ footer {
 }
 
 /* --- CUSTOM SCROLLBAR STYLING FOR GAMES SECTION --- */
+/* These rules should be applied directly to #games, as it's the scrollable element now */
 #games::-webkit-scrollbar {
     width: 12px;
 }
@@ -368,5 +374,10 @@ footer {
     }
     .proxy-group li a {
         padding: 6px 10px;
+    }
+
+    /* Games section responsive adjustment */
+    #games {
+        max-height: calc(100vh - 180px); /* Adjust based on header+footer height on mobile */
     }
 }
