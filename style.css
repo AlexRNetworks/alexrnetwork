@@ -107,69 +107,70 @@ body {
     }
 }
 
-/* Serene Ocean Theme */
-.theme-ocean .animated-background {
-    background: linear-gradient(135deg, #005f73, #0a9396, #94d2bd);
+/* War Theme (Replaces Serene Ocean) */
+.theme-war .animated-background {
+    background: linear-gradient(135deg, #222, #4a0404, #8b0000, #402409); /* Gritty, metallic, fiery tones */
     background-size: 300% 300%;
-    animation: oceanGradientAnimation 20s infinite alternate;
+    animation: warGradientAnimation 18s infinite alternate;
 }
-.theme-ocean header, .theme-ocean footer {
-    background-color: rgba(0, 40, 50, 0.8);
-    box-shadow: 0 2px 10px rgba(0, 150, 170, 0.3);
+.theme-war header, .theme-war footer {
+    background-color: rgba(30, 20, 20, 0.8);
+    box-shadow: 0 2px 10px rgba(200, 0, 0, 0.4);
 }
-.theme-ocean nav ul li a {
-    color: #94d2bd;
+.theme-war nav ul li a {
+    color: #d1b64e; /* Aged gold/brass */
 }
-.theme-ocean nav ul li a:hover,
-.theme-ocean nav ul li a.active {
-    color: #e0f2f7;
+.theme-war nav ul li a:hover,
+.theme-war nav ul li a.active {
+    color: #ff4500; /* Orange-red */
 }
-.theme-ocean .content-section {
-    background-color: rgba(0, 60, 70, 0.7);
-    border: 2px solid #0a9396;
-    box-shadow: 0 5px 20px rgba(0, 150, 170, 0.2);
+.theme-war .content-section {
+    background-color: rgba(20, 10, 10, 0.7);
+    border: 2px solid #8b0000; /* Dark red */
+    box-shadow: 0 5px 20px rgba(139, 0, 0, 0.3);
 }
-.theme-ocean .content-section h1,
-.theme-ocean .content-section h2 {
-    color: #e0f2f7;
+.theme-war .content-section h1,
+.theme-war .content-section h2 {
+    color: #d1b64e;
+    text-shadow: 1px 1px 3px #000;
 }
-.theme-ocean .call-to-action .button {
-    background-color: #0077b6;
+.theme-war .call-to-action .button {
+    background-color: #b30000; /* Darker red */
     color: #fff;
     text-shadow: none;
 }
-.theme-ocean .call-to-action .button:hover {
-    background-color: #00b4d8;
+.theme-war .call-to-action .button:hover {
+    background-color: #ff4500; /* Explosive orange-red */
 }
-.theme-ocean .proxy-list-container,
-.theme-ocean #games {
-    border-color: #0a9396;
-    box-shadow: 0 0 8px rgba(0, 150, 170, 0.4);
+.theme-war .proxy-list-container,
+.theme-war #games {
+    border-color: #8b0000;
+    box-shadow: 0 0 8px rgba(139, 0, 0, 0.6);
 }
-.theme-ocean #proxies h3 {
-    border-color: #0a9396;
-    color: #94d2bd;
+.theme-war #proxies h3 {
+    border-color: #d1b64e;
+    color: #d1b64e;
 }
-.theme-ocean .proxy-group li a {
-    color: #c9e0d9;
+.theme-war .proxy-group li a {
+    color: #c0c0c0; /* Dull silver */
 }
-.theme-ocean .proxy-group li a:hover {
-    background-image: linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef);
-    text-shadow: 0 0 8px rgba(144, 224, 239, 0.5);
+.theme-war .proxy-group li a:hover {
+    background-image: linear-gradient(90deg, #d1b64e, #ff4500, #8b0000); /* Fiery gradient */
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.5);
 }
-.theme-ocean ::-webkit-scrollbar-thumb {
-    background-color: #0077b6;
+.theme-war ::-webkit-scrollbar-thumb {
+    background-color: #b30000;
 }
-.theme-ocean ::-webkit-scrollbar-thumb:hover {
-    background-color: #00b4d8;
+.theme-war ::-webkit-scrollbar-thumb:hover {
+    background-color: #ff4500;
 }
 
-@keyframes oceanGradientAnimation {
+@keyframes warGradientAnimation {
     0% {
-        background-position: 0% 0%;
+        background-position: 0% 50%;
     }
     100% {
-        background-position: 100% 100%;
+        background-position: 100% 50%;
     }
 }
 
@@ -204,7 +205,7 @@ body {
 }
 .theme-arcade nav ul li a {
     color: #fce803; /* Bright yellow */
-    font-family: 'Press Start 2P', cursive; /* Example retro font - you'd need to import this */
+    /* font-family: 'Press Start 2P', cursive; */ /* Example retro font - you'd need to import this */
     text-shadow: 2px 2px #ff00ff;
 }
 .theme-arcade nav ul li a:hover,
@@ -396,7 +397,7 @@ main {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.5s ease; /* Added theme transitions */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.5s ease; /* Added theme transitions */
 }
 
 .call-to-action .button:hover {
@@ -509,6 +510,7 @@ footer {
     max-width: 600px;
     margin: 30px auto;
     box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
+
     max-height: 400px;
     overflow-y: auto;
     text-align: left;
@@ -550,16 +552,19 @@ footer {
 }
 
 /* --- Theme Switcher Section Styles --- */
-.theme-switcher {
+/* Ensure theme-switcher is centered within its content-section */
+#themes .theme-switcher { /* Target the specific theme-switcher within the themes section */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if container has defined height */
     margin-top: 30px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    /* No need for specific max-width here, content-section already limits it */
 }
 
 .theme-button {
@@ -632,7 +637,7 @@ footer {
         max-height: calc(100vh - 180px);
     }
     /* Theme switcher responsive */
-    .theme-switcher {
+    #themes .theme-switcher { /* Specific targeting for themes section */
         flex-direction: column;
         gap: 15px;
         padding: 15px;
