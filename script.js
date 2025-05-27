@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to get the current height of the fixed header
     function getHeaderHeight() {
         if (header) {
-            return header.offsetHeight; // [cite: 176]
+            return header.offsetHeight;
         }
         return 0;
     }
@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const targetSection = document.getElementById(id);
         if (targetSection) {
-            targetSection.classList.add('active'); // [cite: 177]
+            targetSection.classList.add('active');
 
-            requestAnimationFrame(() => { // [cite: 177]
+            requestAnimationFrame(() => {
                 const headerHeight = getHeaderHeight();
-                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset; // [cite: 178]
-                const scrollOffset = headerHeight + 30; // 30px buffer below the header. // [cite: 178]
-                window.scrollTo({ // [cite: 179]
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                const scrollOffset = headerHeight + 30; // 30px buffer below the header.
+                window.scrollTo({
                     top: targetPosition - scrollOffset,
                     behavior: 'smooth'
-                }); // [cite: 180]
+                });
             });
         }
     }
@@ -40,66 +40,73 @@ document.addEventListener('DOMContentLoaded', () => {
             if (link.getAttribute('href') === `#${id}`) {
                 link.classList.add('active');
             }
-        }); // [cite: 181]
+        });
     }
 
     function handleNavigation(event) {
-        event.preventDefault(); // [cite: 181]
-        const targetId = this.getAttribute('href').substring(1); // [cite: 181]
-        showSection(targetId); // [cite: 181]
-        setActiveLink(targetId); // [cite: 182]
-        window.location.hash = targetId; // [cite: 182]
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        showSection(targetId);
+        setActiveLink(targetId);
+        window.location.hash = targetId;
     }
 
     navLinks.forEach(link => {
-        link.addEventListener('click', handleNavigation); // [cite: 182]
+        link.addEventListener('click', handleNavigation);
     });
-    if (learnMoreButton) { // [cite: 183]
-        learnMoreButton.addEventListener('click', handleNavigation); // [cite: 184]
+    if (learnMoreButton) {
+        learnMoreButton.addEventListener('click', handleNavigation);
     }
 
     // --- Theme Switching Logic ---
     function applyTheme(themeName) {
         // Remove existing theme classes
-        // THIS IS THE ONLY LINE MODIFIED FROM YOUR ORIGINAL SCRIPT.TXT (plus this comment)
-        // It now includes 'theme-war' in the list of classes to be removed.
-        body.classList.remove('theme-scifi', 'theme-war', 'theme-arcade', 'theme-ocean');
+        // MODIFIED LINE: Added new theme classes to the list
+        body.classList.remove(
+            'theme-scifi', 
+            'theme-war', 
+            'theme-arcade', 
+            'theme-ocean', // Kept 'theme-ocean' in case it's still used elsewhere or for future
+            'theme-minecraft', 
+            'theme-blackops2', 
+            'theme-neotokyo' 
+        );
         // Add the new theme class if it's not 'default'
-        if (themeName && themeName !== 'default') { // [cite: 185]
-            body.classList.add(`theme-${themeName}`); // [cite: 186]
+        if (themeName && themeName !== 'default') {
+            body.classList.add(`theme-${themeName}`);
         }
 
         // Save the selected theme to localStorage
-        localStorage.setItem('alexrNetworkTheme', themeName); // [cite: 186]
+        localStorage.setItem('alexrNetworkTheme', themeName);
     }
 
     // Event listeners for theme buttons
-    themeButtons.forEach(button => { // [cite: 187]
+    themeButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const themeName = button.dataset.theme; // Get theme name from data-theme attribute // [cite: 187]
+            const themeName = button.dataset.theme; // Get theme name from data-theme attribute
             applyTheme(themeName);
         });
-    }); // [cite: 188]
+    });
     // Apply saved theme on initial page load
-    const savedTheme = localStorage.getItem('alexrNetworkTheme'); // [cite: 188]
-    if (savedTheme) { // [cite: 189]
-        applyTheme(savedTheme); // [cite: 189]
+    const savedTheme = localStorage.getItem('alexrNetworkTheme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
     } else {
         // Apply default theme if no theme is saved (optional, but good practice)
-        applyTheme('default'); // [cite: 190]
-    } // [cite: 191]
+        applyTheme('default');
+    }
     // --- End Theme Switching Logic ---
 
 
     // Initial load - show the home section if no hash in URL, or the section specified by hash
-    setTimeout(() => { // [cite: 191]
+    setTimeout(() => {
         if (window.location.hash) {
             const initialId = window.location.hash.substring(1);
             showSection(initialId);
             setActiveLink(initialId);
         } else {
-            showSection('home'); // [cite: 192]
-            setActiveLink('home'); // [cite: 192]
+            showSection('home');
+            setActiveLink('home');
         }
-    }, 100); // [cite: 193]
-}); // [cite: 193]
+    }, 100);
+});
