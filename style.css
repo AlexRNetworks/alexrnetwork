@@ -494,14 +494,11 @@ main {
     padding: 80px 20px 40px; /* Top/bottom padding values might need to be re-evaluated with new padding-top */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* MODIFIED: Changed justify-content to flex-start to align content to the top (after padding) */
+    align-items: center; /* This helps center flex children */
     justify-content: flex-start; 
-    /* MODIFIED: Reduced padding-top. Adjust this value as needed based on your actual header height. */
-    padding-top: 180px; /* Original was 250px */
+    padding-top: 180px; 
     min-height: 100vh;
-    text-align: center;
-    /* Allow main to scroll if content overflows viewport height, now that overflow:hidden is on body */
+    text-align: center; /* Centers inline content within block children */
     overflow-y: auto; 
 }
 
