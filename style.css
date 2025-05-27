@@ -611,20 +611,17 @@ footer {
 }
 
 #games {
+    #games {
     max-width: 95%;
-    /* --- UNCOMMENT/ADD THESE LINES TO CENTER CONTENT --- */
-    display: flex;            /* Makes #games a flex container */
-    flex-direction: column;   /* Stacks children vertically (h2, p, iframe-container) */
-    align-items: center;      /* Centers children horizontally */
-    /* --- END OF ADDED/UNCOMMENTED LINES --- */
-
+    display: flex;            /* Ensures #games is a flex container */
+    flex-direction: column;   /* Stacks children vertically */
+    align-items: center;      /* Centers children (h2, p, iframe-container) horizontally */
     padding: 40px 20px;
-    max-height: calc(100vh - 220px); /* Adjust based on main padding-top */
+    max-height: calc(100vh - 220px); /* Adjust as needed */
     overflow-y: auto;
-    
-    /* To ensure #games section itself is centered within the main area if it's not full width */
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto;       /* Centers the #games section itself in 'main' */
+    margin-right: auto;      /* Centers the #games section itself in 'main' */
+    /* It will inherit other .content-section styles like display:none/block toggle via JS */
 }
 
 #games h2 {
@@ -723,12 +720,12 @@ footer {
 }
 
 /* --- Theme Switcher Section Styles --- */
-#themes .theme-switcher { 
+#themes .theme-switcher {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center; /* Centers the buttons inside the box */
+    align-items: center;   /* Aligns buttons if they wrap */
     margin-top: 30px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
