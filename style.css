@@ -587,7 +587,7 @@ footer {
 .iframe-container {
     position: relative;
     width: 100%; /* Takes full width of its parent (#games), up to max-width */
-    max-width: 800px; 
+    max-width: 1000px; 
     padding-bottom: 75%; 
     height: 0;
     overflow: hidden;
